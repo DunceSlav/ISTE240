@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RWD with percentages</title>
+<!-- Responsive Web Design -->
+<style>
+
+
+/**********************************
+CSS
+Responsive web design code
+***********************************/
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 32%;
+  margin-right: 2%;
+}
+
+.content {
+  width: 65.66667%;
+}
+
+/**********************************
+Code that just makes it look nice
+***********************************/
+.sidebar, .content {
+  background: #888;
+  height: 15em;
+  float: left;
+  border-radius: 1.5em;
+  color: #FFF;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h1 {
+  padding: 6em 0;
+  font-size: 1em;
+}
+
+/*media queries*/
+@media screen and (max-width: 1040px){
+  .sidebar, .content{
+    width: 100%;
+  }
+
+  .content{
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width:900px) and (max-width:1000px){
+  .sidebar{
+    background: orange;
+  }  
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="sidebar"><h1>Sidebar</h1></div>
+  <div class="content"><h1>Content</h1></div>
+</div>
+</body>
+</html>

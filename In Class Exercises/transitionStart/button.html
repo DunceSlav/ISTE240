@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Untitled</title>
+	<style>
+.a-btn{
+    background:#80a9da;
+    padding-left:20px;
+    padding-right:80px;
+    height:38px;
+    position:relative;
+    border:1px solid #5d81ab;
+    border-radius:20px;
+    float:left;
+    clear:both;
+    margin:10px 0px;
+    text-decoration:none;
+    /* out transition! */
+    transition:all 0.3s linear;
+}
+.a-btn-text{
+    padding-top:5px;
+    display:block;
+    font-size:28px;
+    color:#446388;
+
+}
+.a-btn-slide-text{
+    position:absolute;
+    top:0px;
+    right:52px;
+    width:0px;
+    background:#63707e;
+    color:#fff;
+    font-size:18px;
+    white-space:nowrap;
+    text-transform:uppercase;
+    text-indent:10px;
+    overflow:hidden;
+    line-height:38px;
+    transition:width 0.3s linear;
+}
+
+/* What to change to */
+.a-btn:hover{
+    padding-right:180px;
+    background:orange;
+}
+
+.a-btn:hover .a-btn-slide-text{
+    width:100px;
+}
+
+
+	</style>
+</head>
+<body>
+
+				<div class="button-wrapper">
+					<a href="#" class="a-btn">
+						<span class="a-btn-text">Register now</span> 
+						<span class="a-btn-slide-text">It's free!</span>
+					</a>
+					<a href="#" class="a-btn">
+						<span class="a-btn-text">Become a member</span>
+						<span class="a-btn-slide-text">Sign up!</span>
+					</a>
+				</div>
+
+</body>
+</html>

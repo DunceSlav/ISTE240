@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!-- demonstration of JavaScript form validation -->
+<head>
+<meta charset="utf-8">
+<title>Form validation</title>
+<script>
+
+	//validation function for the form 
+	//arguments none
+	//return values: true if filled in/ false if not
+	function doVal(){
+		
+		let ret=true; //the return value
+		if(document.getElementById('fname').value == ''){
+			//if i am in here, it is empty, do not allow to leave
+			//should turn something red to tell user to fill this in
+			document.getElementById('fnameAst').style.display='inline';
+			document.getElementById('fname').style.backgroundColor="rgba(200, 0, 0, 0.5)";
+			ret = false;
+		}
+		else{
+			//turn off notifications
+			document.getElementById('fnameAst').style.display='none';
+			document.getElementById('fname').style.backgroundColor="";
+		}
+		if(document.getElementById('lname').value == ''){
+			//if i am in here, it is empty, do not allow to leave
+			//should turn something red to tell user to fill this in
+			document.getElementById('lnameAst').style.display='inline';
+			document.getElementById('lname').style.backgroundColor="rgba(200, 0, 0, 0.5)";
+			ret = false;
+		}
+		else{
+			//turn off notifications
+			document.getElementById('lnameAst').style.display='none';
+			document.getElementById('lname').style.backgroundColor="";
+		}
+		return ret;
+	}
+</script>
+</head>
+<body>
+<div>
+<form action="validation.html" method="get" onsubmit="return doVal();">
+	<fieldset>
+		<legend>Please Register</legend>
+		<input type="text" name="fname" id="fname" placeholder="First Name">
+		<span style="color: red; display:none;" id="fnameAst">*</span><br>
+		<input type="text" name="lname" id="lname" placeholder="Last Name">
+		<span style="color: red; display:none;" id="lnameAst">*</span><br>
+		<input type="submit" value ="Submit">
+	</fieldset>
+</form>
+</div>
+</body>
+</html>

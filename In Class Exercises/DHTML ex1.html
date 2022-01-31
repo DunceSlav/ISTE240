@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<thml>
+    <head>
+        <meta charset="tuf-8" />
+        <title></title>
+        <style>
+            .myClass{
+                color: red;
+            }
+        </style>
+        <script>
+            var x=5;
+            function change(dom){
+                //get it
+                //document.getElementbyID(myP)...
+                //or
+                //console.log(this);
+                //console.log(dom);
+                dom.style.color="green";
+                dom.style.marginLeft="15px";
+                dom.style.cursor='pointer';
+                dom.style="";
+            }
+
+            function moveIt(){
+                let dom = document.getElementById('myP2');
+                dom.style.position="relative";
+                dom.style.left= parseInt(dom.style.left) + 50 + "px";
+            }
+
+            document.getElementById('myP').onclick = function(){change("freed");}
+            /*if I wanted to assign an event to a dom object & have the reference to this be the dom object
+            <p style="color:red" id="myP" onmouseover="change()">hi</p>
+            console.log(this);
+            */
+
+        </script>
+    </head>
+    <body>
+        <p class="myClass" id="myP" onmouseover="change(this)" onmouseleave="this.style.marginLeft='0px'; this.style.color='';">hi</p>
+        <p style="color:blue" id="myP2" onmouseover="change(this)">hi</p>
+        <button onclick="moveIt()">click to move</button>
+    </body>
+</thml>

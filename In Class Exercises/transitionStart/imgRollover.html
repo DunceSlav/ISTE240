@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CSS Transitions Img Rollover</title>
+	<style>
+body{
+	background:#aaa;
+}
+.view {
+   width: 800px;
+   height: 534px;
+   margin: 10px;
+   float: left;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+
+}
+.view .mask,.view .content {
+   width: 800px;
+   height: 534px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+
+.view-first .mask {
+   opacity: 0;
+   background-color: rgba(219,127,8, 0.7);
+   transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+   transform: translateY(-100px);
+   opacity: 0;
+   background-color:rgba(150, 150, 150, 0.46);
+   transition: all 0.2s ease-in-out;
+}
+.view-first p {
+   transform: translateY(100px);
+   opacity: 0;
+   transition: all 0.2s linear;
+}
+
+/*start writing the rules to work with the transitions above*/
+.view-first img{
+   transition: all 0.2s linear;
+}
+/*when i rollover the .view-first */
+.view-first:hover img{
+   transform: scale(1.1, 1.1);
+}
+
+.view-first:hover .mask{
+   opacity: 1;
+}
+
+.view-first:hover p,
+.view-first:hover h2{
+   opacity: 1;
+   transform:translateY(0);
+}
+
+.view-first:hover p{
+   transition-delay: 0.5s;
+}
+	</style>
+</head>
+<body>
+
+<div class="view view-first">
+	<img src="images/1.jpg" />
+    <div class="mask">
+    	<h2>Hover Title</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet ligula vel nisi luctus suscipit. Vestibulum lobortis elit eu arcu vulputate accumsan? Ut ante ante, accumsan at porttitor nec, commodo ut lectus. Cras sed magna efficitur, mattis nisl vitae, finibus sapien. Sed ac mollis nisl? Nam suscipit felis est, in accumsan dolor eleifend sit amet. Nunc id risus risus. Nulla at dui blandit, aliquet arcu ut, malesuada nulla. Cras vel lobortis arcu. Aenean eget hendrerit massa, et semper mauris. Morbi nec auctor enim.
+		</p>
+		<p>
+			Integer dignissim nibh at gravida volutpat. Fusce tristique erat ac dolor iaculis, a aliquam ex semper. Aenean scelerisque venenatis erat. Suspendisse nec mi nulla. Maecenas eleifend purus urna, eget tempus purus scelerisque vitae. Fusce mollis aliquet hendrerit. Aenean volutpat a massa sit amet convallis. Sed auctor consectetur nisl, eu pretium enim gravida non. Maecenas quis nibh at lacus tincidunt imperdiet porttitor ac dolor? Nulla facilisi. Cras pretium urna sit amet consectetur vehicula. Pellentesque suscipit eros venenatis orci fringilla aliquet?
+		</p>
+		<p>
+			Vestibulum placerat ipsum eu posuere tristique. Nullam in sapien non mauris venenatis vehicula eget quis diam. Suspendisse eget orci tortor. Aenean eu vulputate ipsum, nec vehicula mauris. Nulla in tellus magna. Quisque tristique ipsum vitae luctus ultricies! Suspendisse ultrices sapien ligula, quis sollicitudin orci vestibulum ut. Aliquam et dignissim magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse tincidunt libero non quam fringilla, sed mattis ipsum luctus. Aliquam aliquet mauris imperdiet, molestie lacus eu, suscipit tortor.
+		</p>                                 
+    </div>
+</div> 
+</body>
+</html>

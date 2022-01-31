@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple CSS3 Transitions</title>
+<!-- CSS3 animations with the transition property -->
+<style> 
+
+/*
+    usual example: 
+    transition: width 10s, ease 1s;
+    the same as 
+    transition-property:width;
+    transition-duration: 10s;
+    transition-timing-function:ease;
+    transition-delay:1s;
+*/
+div#bigblue {
+    width: 100px;
+    height: 100px;
+    background-color: #1C2742;
+    /* set the transitions here */
+    transition: all 4s, width 3s, ease 2s;
+}
+
+div#bigblue:hover {
+/* the hover pseudo element triggers the transition */
+
+	width: 300px;
+	/* Start with only width, then gradually add a few more properties */
+    background-color: #E0EEFB;
+    border-radius: 50%;
+
+    /****************************************************************/
+}
+
+</style>
+</head>
+<body>
+<p>Hover over the div element above, to see the transition effect.</p>
+<div id="bigblue"></div>
+
+
+</body>
+</html>

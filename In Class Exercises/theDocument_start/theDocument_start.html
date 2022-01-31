@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Demo</title>
+</head>
+<style>
+#best {
+     position:absolute;
+     left:500px;
+     top:10px;
+     }
+button {
+	margin-left:10px;
+}
+</style>
+
+ <script>
+	function number01(){
+       //change the text of the <title> tag to say "PowerPoint Demo"
+		//document.getElementsByTagName('title')[0].innerHTML = "PowerPoint Demo";
+		document.getElementsByTagName('title')[0].firstChild.data = "PowerPoint Demo"; 
+	}
+	function number02(){
+	   //change the second <p> tag so the font is red
+		document.getElementsByTagName('p')[1].style.color = "red";
+	   
+	}
+	function number03(){
+		//If "3. Yahoo" is displayed, make it disappear
+		var x = document.getElementById('myList').getElementsByTagName('li')[2];
+
+		if(x.style.display == 'none'){
+			x.style.display = '';
+		}
+		else{
+			x.style.display = 'none';
+		}
+		//else, make it appear!
+
+	}
+	function number04(){
+		//make all with the className of 'new' have a yellow background
+		var items = document.getElementsByClassName('new');
+		var len = items.length;
+
+		for(let i=0; i<len; i++){
+			items[i].style.backgroundColor = "yellow";
+		}
+	}
+	function number05(){
+		//each time it is clicked, make the image (id of 'best') move right by 10 pixels
+		var img = document.getElementById('best');
+
+		img.style.left = parseInt(img.style.left) + 10 + 'px';
+	}
+	function number06(){
+		//append, at the end of the document, the text " ISTE 240 "
+		//document.getElementsByTagName('body')[0].innerHTML += "ISTE 240 "
+		document.getElementsByTagName('body')[0].appendChild(document.createTextNode("ISTE 240 "));
+	}
+   function number07(){
+      //create an <li> node
+		let liEle = document.createElement('li');
+      //create an <a> node
+		let aEle = document.createElement('a');
+      //create a text node holding "Purdue University"
+		let textEle = document.createTextNode("Purdue University");
+      //put the text node inside of the <a> tag
+		aEle.appendChild(textEle);
+      //give the <a> tag the href attribute and set it to "https://www.purdue.edu/"
+		aEle.setAttribute('href', "https://www.purdue.edu/");
+		aEle.setAttribute('target', "_blank");
+      //put the <a> tag inside of the <li>
+		liEle.appendChild(aEle);
+      //put the <li> in the <ol> so it shows up first!
+		document.getElementById('myList').insertBefore(liEle, document.getElementById('myList').firstChild)
+	}
+</script>
+<body>
+	<h1>DOM demo</h1>
+	<img src="ritLogo.png" id="best" style="position: relative; left: 300px;">
+	<p class="new">This is a demonstration.</p>
+	<ul>
+		<li>Document is the html page</li>
+		<li>Object refers to things on the page</li>
+		<li>Model refers to standardization</li>
+	</ul>
+	<p>This is short but it is the second paragraph</p>
+	<p class="new">This is the third paragraph</p>
+	<ol id="myList">
+	  <li><a href="http://www.rit.edu">RIT</a></li>
+	  <li><a href="http://www.google.com">Google</a></li>
+	  <li><a href="http://www.yahoo.com">Yahoo</a></li>
+	  <li><a href="http://www.brockport.edu">Brockport</a></li>
+	</ol>
+	<p>
+	<button type="button" onclick="number01()"; >01</button> 
+	<button type="button" onclick="number02();" >02</button> 
+	<button type="button" onclick="number03();" >03</button> 
+	<button type="button" onclick="number04();" >04</button> 
+	<button type="button" onclick="number05();" >05</button> 
+	<button type="button" onclick="number06();" >06</button>
+	<button type="button" onclick="number07();" >07</button>
+    </p>
+
+</body>
+</html>

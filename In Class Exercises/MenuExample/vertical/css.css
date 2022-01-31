@@ -1,0 +1,45 @@
+body {
+	font: normal 11px verdana;
+}
+
+nav ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+	width: 150px;
+	border-bottom: 1px solid #ccc;
+	
+}
+nav ul li{
+	position: relative;
+}
+nav li ul{
+	position: absolute;
+	left: 149px;
+	top: 0;
+}
+
+/*makes it pretty*/
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: #777;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
+
+/*makes it work*/
+nav ul li >ul{
+	display: none;
+}
+nav ul li:hover >ul{
+	display: block;
+}
+
+/*make the text color be red on the current and parent elements*/
+nav ul li:hover > a{
+	color:red;
+	background-color: #999;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script>
+            function validate(){
+                if(document.getElementById('myInput').value != ''){
+                    //if i'm here they didn't put anything in
+                    console.log(document.getElementById('myInput').value);
+                    return true;
+                } 
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <form method="get" action="form.html" onsubmit="return validate();">
+            name:<input type="text" name="fName" id="myInput"/><br/>
+            <input type="submit" value="go" />
+        </form>
+    </body>
+</html>

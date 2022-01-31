@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Horizontal Drop Down Menus</title>
+	<!--code for this example extracted out of an article from alistapart.com
+	check out the article at http://www.alistapart.com/articles/dropdowns-->
+<style type="text/css">
+/* make it look good */
+body {
+	font-family: arial, helvetica, serif;
+	background: white;
+	padding: 2em;
+	margin: 0;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#nav a {
+	font-weight: bold;
+	color: green;
+	text-decoration: none;
+}
+#nav li li a {
+	display: block;
+	font-weight: normal;
+	color: #060;
+	padding: 0.2em 10px;
+}
+li {
+	float: left;
+	width: 10em;
+	text-align: center;
+	cursor: default;
+	background-color: white;
+	border: 1px solid #7d6340;
+	border-width: 0px 0px 1px 0px;
+}
+li li {
+	display: block;
+	float: none;
+	background-color: white;
+	border: 0;
+}
+/* make them disappear! */
+li ul, li li ul {
+	display: none; /* comment out this line to see what it looks like!  */
+	position: absolute;
+	font-weight: normal;
+	padding: 0.5em 0 1em 0;
+	border: solid 1px #7d6340;
+}
+/* make it work! */
+li:hover ul{
+	display: block;
+}
+/* make it look good once it shows up! */
+#nav li li a:hover {
+	padding: 0.2em 5px;
+	border: 5px solid #7d6340;
+	border-width: 0 5px;
+	cursor:pointer;
+}
+</style>
+</head>
+<body>
+	<ul id="nav">
+		<li>
+			<div><a href="">Main I</a></div>
+			<ul>
+				<li><a href="">Choice I</a></li>
+				<li><a href="">Choice II</a></li>
+				<li><a href="">Choice III</a></li>
+			</ul>
+		</li>
+		<li>
+			<div><a href="">Main II</a></div>
+			<ul>
+				<li><a href="">Choice IV</a></li>
+				<li><a href="">Choice V</a></li>
+				<li><a href="">Choice VI</a></li>
+			</ul>
+		</li>
+		<li>
+			<div><a href="">Main III</a></div>
+			<ul>
+				<li><a href="">Choice VII</a></li>
+				<li><a href="">Choice VIII</a></li>
+				<li><a href="">Choice IV</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

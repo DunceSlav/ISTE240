@@ -1,0 +1,38 @@
+/* Image Preload demonstration */
+
+/*big image placement*/
+
+	  #bigPlace {position:absolute; top:75px; left:300px;}
+	  
+	  body {background-color: #06440A;
+	  		color:#75CE75;
+			}
+	  
+.table { 
+	   position:absolute;
+	   left:10px; 
+	   top:550px;
+	   z-index:70;
+	   padding:3px;
+	   border-bottom-width:3px; 
+	   border-left-width: 3px; 
+	   border-right-width: 3px; 
+	   border-top-width: 3px; 
+	   border-style: outset; 
+	   border-color:#336699; 
+	   border-radius: 5px;
+	  }
+img {
+ 	border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+ }
+ #bigPlace {border-bottom-width:3px; 
+	   border-left-width: 3px; 
+	   border-right-width: 3px; 
+	   border-top-width: 3px; 
+	   border-style: outset; 
+	   border-color:#336699;
+	}
+	
+  

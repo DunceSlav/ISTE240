@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Load</title>
+	<script> 
+		function adder(){
+			let domArr = document.getElementsByTagName('p');
+			for(let i=0, len=domArr.length; i<len; i++){
+				//adds 1 to each element
+				domArr[i].innerHTML= parseInt(domArr[i].innerHTML) + 1;
+			}
+		}
+	</script>
+</head>
+<body onload="adder();">
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+	<p>4</p>
+	<p>5</p>
+</body>
+</html>
+
+
