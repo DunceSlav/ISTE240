@@ -1,0 +1,64 @@
+/*An image that repeates horizontally*/
+body{
+    background-image: url("../images/side.jpg");
+    background-repeat: repeat-y;
+}
+
+/*the grid container is set to have two columns and moved over 150px right*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 150px;
+}
+/*styles each of the items in the grid*/
+.grid-item {
+    background-color: darkolivegreen;
+    color:pink;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    margin: 15px;
+}
+/*styles each of the items in the grid when the cursor is hovering over it*/
+.grid-container :hover{
+    background-color: purple;
+    transition: all 1s;
+    cursor: grab;
+}
+
+/*styles the astrisk to be larger than the rest of the text, have a shadow, and 
+have a relative position to the grid container*/
+.special{
+    font-size: 120px;
+    color: lightgreen;
+    text-shadow: 5px 5px lightgoldenrodyellow;
+    position: relative;
+    left: 20px;
+    bottom:100px;
+}
+
+/*styles the text and gives it a relative position to the grid container*/
+.text{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: -300px;
+}
+
+/*changes the grid layout when the page is smaller than 600 pixels*/
+@media screen and (max-width: 600px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+/*removes the repeating horizontal image and moves the column over to the left 150pixels when 
+the page is smaller than 500 pixels*/
+@media screen and (max-width: 500px){
+    body{
+        background-image: none;
+        margin-left: -150px;
+    }
+}

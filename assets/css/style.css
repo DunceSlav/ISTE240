@@ -1,0 +1,199 @@
+body{
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 1em;
+}
+
+p{
+    font-size: 20px;
+    padding-left: 1em;
+}
+
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+    color:violet;
+}
+  
+a:hover {
+    text-decoration: underline;
+    color:rosybrown;
+}
+  
+a:active {
+    text-decoration: underline;
+    color: red;
+}
+
+#picture_of_me{
+    float: right;
+    padding-left: 1em;
+    width: 252px;
+    height: 336px;
+}
+
+.menu {
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.menu ol {
+    list-style-type: none;
+    margin: 0 auto;
+}
+.menu > ol {
+    max-width: 1000px;
+    padding: 0 2rem;
+    display:flex;
+}
+.menu > ol > .menu-item {
+    flex: 1;
+    padding: 0.75rem 0;
+}
+.menu > ol > .menu-item:after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    bottom: 5px;
+    left: calc(50% - 2px);
+    background: darkgrey;
+    will-change: transform;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+.menu > ol > .menu-item:hover:after {
+    transform: scale(1);
+}
+.menu-item {
+    position: relative;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.menu-item a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    color: white;
+}
+.sub-menu .menu-item {
+    padding: 0.75rem 0;
+    background: rgb(85, 85, 85);
+    opacity: 0;
+    transform-origin: bottom;
+    animation: enter 0.2s ease forwards;
+}
+.sub-menu .menu-item:nth-child(1) {
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+}
+.sub-menu .menu-item:nth-child(2) {
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
+}
+.sub-menu .menu-item:nth-child(3) {
+    animation-duration: 0.4s;
+    animation-delay: 0.2s;
+}
+.sub-menu .menu-item:nth-child(4) {
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+}
+.sub-menu .menu-item:nth-child(5) {
+    animation-duration: 0.6s;
+    animation-delay: 0.4s;
+}
+.sub-menu .menu-item:nth-child(6) {
+    animation-duration: 0.7s;
+    animation-delay: 0.5s;
+}
+.sub-menu .menu-item:nth-child(7) {
+    animation-duration: 0.8s;
+    animation-delay: 0.6s;
+}
+.sub-menu .menu-item:hover {
+    background: darkgrey;
+}
+.sub-menu .menu-item a {
+    padding: 0 0.75rem;
+}
+  
+.sub-menu {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+.menu-item:hover > .sub-menu {
+    display: block;
+}
+  
+@media screen and (max-width: 600px) {
+    .sub-menu {
+      width: 100vw;
+      left: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+}
+  
+* {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+@keyframes enter {
+    from {
+      opacity: 0;
+      transform: scaleY(0.98) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+}
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@media only screen and (max-width:768px){
+    #picture_of_me{
+        float: none;
+    }
+    #picturetime{
+        text-align: center;
+    }
+}

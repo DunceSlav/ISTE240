@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Michael Pacholarz-->
+<!--September 26, 2021-->
+<!--ISTE240 Exercise 4–JavaScript Part 1 -->
+<meta charset=utf-8 />
+<title>Exercise 4</title>
+<script src="assets/js/js.js"></script>
+<link rel="stylesheet" href="assets/css/EX04.css">
+
+</head> 
+<body>
+	<div>
+		<h2>JavaScript Exercise 4a </h2> 
+		<p id="text">This style of this paragraph will change when you click the button below.</p>
+	</div>
+	<div>
+		<button id="styleMe" onclick="jsStyle()">Change Style</button>
+	</div>
+
+    <hr>
+
+    <h2>JavaScript Exercise 4b </h2> 
+	<form id="regForm">
+		First name: <input type="text" id="fname" value="Boo"><br>
+		Last name: <input type="text" id="lname" value="Radley"><br>
+		<input type="button" onclick="getFormValues();" value="Submit">
+	</form>
+
+    <hr>
+
+    <h2>JavaScript Exercise 4c</h2> 
+    <form>
+        <select id="mySelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>Yellow</option>
+            <option>Orange</option>
+            <option>Purple</option>
+        </select>
+        <input type="button" onclick="getOptions()" value="Display the Options">
+    </form>
+
+    <hr>
+
+    <div>
+		<h2>JavaScript Exercise 4d </h2> 
+	</div>
+	<div>
+		<p id="rb" onmouseover="mouseover()" onmouseout="mouseout()">This sentence will turn red when you mouseover it.</p>
+	</div>
+
+    <hr>
+
+    <div>
+		<h2>JavaScript Exercise 4d </h2> 
+	</div>
+	<form>
+		<input type="text" id="firstoperand" placeholder="First Operand"/><br>
+		<input type="text" id="secondoperand" placeholder="Second Operand"/><br>
+		<input type="button" onclick="divide()" value="Divide" />
+		<input type="button" onclick="multiply()" value="Multiply" />
+		<p>The answer: <span id="result"></span></p>
+	</form>
+</body>
+</html>

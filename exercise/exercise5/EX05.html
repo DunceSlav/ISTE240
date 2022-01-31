@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Michael Pacholarz-->
+<!--September 26, 2021-->
+<!--ISTE240 Exercise 5–JavaScript Part 2 -->
+<meta charset=utf-8 />
+<title>Exercise 5</title>
+<script src="assets/js/js.js"></script>
+<link rel="stylesheet" href="assets/css/EX05.css">
+
+</head> 
+<body>
+	<div>
+		<h2>JavaScript Exercise 5a </h2> 
+		<p id="text" style="position:relative; left:0px;">I move</p>
+	</div>
+	<div>
+		<button id="moving" onclick="moveRight()">Move the text</button>
+	</div>
+
+    <hr>
+
+    <!--Exercise 5b -->
+	<div>
+		<p class="exerTitle">JavaScript Exercise 5b </p>
+		<form id="regForm">
+			<input type="text" id="fname" placeholder = "boo"><br>
+			<input type="text" id="lname" placeholder = "Radley"><br>
+			<input type="checkbox" id="dog">I have a dog. (Check if you do)<br>
+			<input type="text" id="major" placeholder = "major"><br>
+			<input type="button" onclick="howMany()" value="Count of inputs">
+		</form>
+	</div>
+	<hr>
+
+	<div id="5c">
+		<h2>JavaScript Exercise 5c, 5d, 5e</h2> 
+		<form>
+			<select id="mySelect" onmouseover="changeColor()">
+				<option>Red</option>
+				<option>Green</option>
+				<option>Blue</option>
+				<option>Yellow</option>
+				<option>Orange</option>
+				<option>Purple</option>
+			</select>
+			<input type="button" onclick="colorChanger(); textNode();" value="Color changer">
+		</form>
+	</div>
+    <hr>
+</body>
+</html>

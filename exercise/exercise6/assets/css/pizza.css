@@ -1,0 +1,20 @@
+/* CSS Document for Pizza Shop */
+/* Deb LaBelle  */
+body { 
+		color:#962709;
+		font-family: fantasy, serif;
+		background-color:#DBC28F;
+		}
+		
+#wrapper{
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+footer {
+	font-size:.75em;
+	background-color:#445921;
+	color:#FFFFFF;
+	text-align:center;
+	}

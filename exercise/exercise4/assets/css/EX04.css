@@ -1,0 +1,11 @@
+/*Michael Pacholarz
+September 26, 2021
+ISTE240 Exercise 4–JavaScript Part 1
+*/
+body{
+    /*adds a margin to the left and the right of the page that is twice the size of the current font*/
+    margin-left: 2em;
+    margin-right: 2em;
+    /*changes the font of the page to Courier New*/
+    font-family: 'Courier New', Courier, monospace;
+}
